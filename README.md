@@ -2,7 +2,7 @@
 
 Projeto de implementação de uma **Unidade Lógica e Aritmética (ULA)** de 8 bits utilizando a linguagem de descrição de hardware **Verilog**.
 
-Este trabalho foi desenvolvido como requisito avaliativo da **Pesquisa Curricularizada de Graduação (PCG)** do curso de Ciência da Computação / Sistemas de Informação da **Universidade Católica de Santos (UniSantos)**.
+Este trabalho foi desenvolvido como requisito avaliativo da **Pesquisa Curricularizada de Graduação (PCG)** do curso de Ciência da Computação da **Universidade Católica de Santos (UniSantos)**.
 
 ## 👥 Autores
 
