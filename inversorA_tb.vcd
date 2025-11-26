@@ -1,0 +1,29 @@
+$date
+	Wed Oct 29 11:07:47 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module inversorA_tb $end
+$var wire 8 ! S [7:0] $end
+$var reg 8 " A [7:0] $end
+$scope module teste $end
+$var wire 8 # A [7:0] $end
+$var wire 8 $ S [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11101 $
+b11100010 #
+b11100010 "
+b11101 !
+$end
+#20

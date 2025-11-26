@@ -1,0 +1,38 @@
+$date
+	Wed Oct 29 12:42:54 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module diferente_tb $end
+$var wire 8 ! S [7:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$scope module teste $end
+$var wire 8 $ A [7:0] $end
+$var wire 8 % B [7:0] $end
+$var reg 8 & S [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b11100010 %
+b11100010 $
+b11100010 #
+b11100010 "
+b0 !
+$end
+#20
+b1 !
+b1 &
+b10 #
+b10 %
+#40

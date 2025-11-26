@@ -1,0 +1,36 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "c:\iverilog\lib\ivl\system.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "c:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "c:\iverilog\lib\ivl\va_math.vpi";
+S_000001dec613ad40 .scope module, "inversorA_tb" "inversorA_tb" 2 4;
+ .timescale -12 -12;
+v000001dec61369a0_0 .var "A", 7 0;
+v000001dec6136a40_0 .net "S", 7 0, L_000001dec5f95680;  1 drivers
+S_000001dec613a280 .scope module, "teste" "inversorA" 2 9, 3 1 0, S_000001dec613ad40;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /OUTPUT 8 "S";
+L_000001dec5f95680 .functor NOT 8, v000001dec61369a0_0, C4<00000000>, C4<00000000>, C4<00000000>;
+v000001dec613a410_0 .net "A", 7 0, v000001dec61369a0_0;  1 drivers
+v000001dec6137190_0 .net "S", 7 0, L_000001dec5f95680;  alias, 1 drivers
+    .scope S_000001dec613ad40;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "inversorA_tb.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001dec613ad40 {0 0 0};
+    %pushi/vec4 226, 0, 8;
+    %store/vec4 v000001dec61369a0_0, 0, 8;
+    %delay 20, 0;
+    %vpi_call 2 17 "$display", "Teste finalizado!" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "inversorA_tb.v";
+    "./inversorA.v";

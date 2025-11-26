@@ -1,0 +1,60 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "c:\iverilog\lib\ivl\system.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "c:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "c:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "c:\iverilog\lib\ivl\va_math.vpi";
+S_0000019563765ee0 .scope module, "igual_tb" "igual_tb" 2 4;
+ .timescale -12 -12;
+v00000195638d9cf0_0 .var "A", 7 0;
+v00000195638da090_0 .var "B", 7 0;
+v0000019563766200_0 .net "S", 7 0, v0000019563764360_0;  1 drivers
+S_0000019563766070 .scope module, "teste" "igual" 2 9, 3 1 0, S_0000019563765ee0;
+ .timescale -12 -12;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 8 "S";
+v00000195638d7170_0 .net "A", 7 0, v00000195638d9cf0_0;  1 drivers
+v00000195638d6da0_0 .net "B", 7 0, v00000195638da090_0;  1 drivers
+v0000019563764360_0 .var "S", 7 0;
+E_00000195638dc630 .event anyedge, v00000195638d6da0_0, v00000195638d7170_0;
+    .scope S_0000019563766070;
+T_0 ;
+    %wait E_00000195638dc630;
+    %load/vec4 v00000195638d7170_0;
+    %load/vec4 v00000195638d6da0_0;
+    %cmp/e;
+    %jmp/0xz  T_0.0, 4;
+    %vpi_call 3 8 "$display", "Igual" {0 0 0};
+    %jmp T_0.1;
+T_0.0 ;
+    %vpi_call 3 10 "$display", "Diferente" {0 0 0};
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0000019563765ee0;
+T_1 ;
+    %vpi_call 2 12 "$dumpfile", "igual_tb.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000019563765ee0 {0 0 0};
+    %pushi/vec4 226, 0, 8;
+    %store/vec4 v00000195638d9cf0_0, 0, 8;
+    %pushi/vec4 226, 0, 8;
+    %store/vec4 v00000195638da090_0, 0, 8;
+    %delay 20, 0;
+    %pushi/vec4 226, 0, 8;
+    %store/vec4 v00000195638d9cf0_0, 0, 8;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v00000195638da090_0, 0, 8;
+    %delay 20, 0;
+    %vpi_call 2 17 "$display", "Teste finalizado!" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "igual_tb.v";
+    "./igual.v";

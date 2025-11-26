@@ -1,0 +1,36 @@
+$date
+	Wed Oct 29 12:29:45 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module igual_tb $end
+$var wire 8 ! S [7:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$scope module teste $end
+$var wire 8 $ A [7:0] $end
+$var wire 8 % B [7:0] $end
+$var reg 8 & S [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx &
+b11100010 %
+b11100010 $
+b11100010 #
+b11100010 "
+bx !
+$end
+#20
+b10 #
+b10 %
+#40
