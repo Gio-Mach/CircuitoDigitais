@@ -4,6 +4,8 @@ Projeto de implementação de uma **Unidade Lógica e Aritmética (ULA)** de 8 b
 
 Este trabalho foi desenvolvido como requisito avaliativo da **Pesquisa Curricularizada de Graduação (PCG)** do curso de Ciência da Computação da **Universidade Católica de Santos (UniSantos)**.
 
+Video de Explicação https://youtu.be/j17xqmxIDqQ?si=14Xki5RkvqwsjFS2
+
 ## 👥 Autores
 
 * **Eduardo de Melo Flam**
